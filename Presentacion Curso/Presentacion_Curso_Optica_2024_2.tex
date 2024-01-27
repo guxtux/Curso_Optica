@@ -1,0 +1,503 @@
+\documentclass[12pt]{beamer}
+\usepackage{../Estilos/BeamerFC}
+\usepackage{../Estilos/ColoresLatex}
+\usefonttheme{serif}
+\input{../Preambulos/preambulo_Beamer_Warsaw_seahorse}
+
+\date{29 de enero de 2024}
+\title{Curso de Óptica}
+\subtitle{Semestre 2024-2}
+
+
+\newcommand\RBox[1]{%
+  \tikz\node[draw,rounded corners,align=center,] {#1};%
+}
+
+
+\begin{document}
+\fontsize{14}{14}\selectfont
+\spanishdecimal{.}
+\maketitle
+
+\section*{Contenido}
+\frame{\tableofcontents[currentsection, hideallsubsections]}
+
+\begin{frame}
+\frametitle{Equipo académico}
+\begin{center}
+\RBox{
+M. en C. Gustavo Contreras Mayén \\
+\href{mailto:gux7avo@ciencias.unam.mx}{gux7avo@ciencias.unam.mx}
+}
+\vskip 1cm
+\RBox{
+M. en C. Abraham Lima Buendía \\
+\href{mailto:abraham3081@ciencias.unam.mx}{abraham3081@ciencias.unam.mx}
+}
+\end{center}
+\end{frame}
+
+\section{Presentación del curso}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Objetivos}
+
+\begin{frame}
+\frametitle{Objetivo del Programa}
+\setbeamercolor{item projected}{bg=red,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item  Enseñar los fundamentos de la óptica geométrica y la óptica física, así como sus aplicaciones.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos adicionales}    
+\setbeamercolor{item projected}{bg=red,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item El alumno reconocerá que los diversos fenómenos ópticos observados en la naturaleza, así como sus aplicaciones son una consecuencia directa de la teoría electromagnética revisada en los cursos previos.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Objetivos adicionales}
+\setbeamercolor{item projected}{bg=red,fg=white}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item El alumno resolverá de la mejor manera los problemas modelo del curso.
+\end{enumerate}
+\end{frame}
+% \begin{frame}
+% \frametitle{Objetivos 4}
+% \setbeamercolor{item projected}{bg=red,fg=white}
+% \setbeamertemplate{enumerate items}{%
+% \usebeamercolor[bg]{item projected}%
+% \raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+% }
+% \begin{enumerate}[<+->]
+% \conti
+% \item En particular se hará énfasis en la confiabilidad de los resultados respecto a los errores tanto del algoritmo de solución como de las limitaciones numéricas de la computadora. 
+% \conti
+% \end{enumerate}
+% \end{frame}
+% \begin{frame}
+% \frametitle{Objetivos 4}
+% Esta capacidad se adquirirá a lo largo del curso comparando resultados numéricos con otros tipos de análisis, en las regiones en las cuales se pueden llevar ambos a cabo.
+% \end{frame}
+% \begin{frame}
+% \frametitle{Objetivos 5}
+% \setbeamercolor{item projected}{bg=red,fg=white}
+% \setbeamertemplate{enumerate items}{%
+% \usebeamercolor[bg]{item projected}%
+% \raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+% }
+% \begin{enumerate}[<+->]
+% \conti
+% \item  Por otra parte permitirá al estudiante explorar regiones de comportamiento físico sólo accesibles al cálculo numérico.
+% \end{enumerate}
+% \end{frame}
+
+\section{Sobre el curso}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Lugar y horario}
+
+\begin{frame}
+\frametitle{Lugar y horario} 
+\textbf{Lugar: } 
+\\
+\bigskip
+\textbf{Horario: } Lunes, Miércoles y Viernes de 18 a 20 pm.
+\end{frame}
+
+\subsection{Metodología de Enseñanza}
+
+\begin{frame}
+\frametitle{Metodología de Enseñanza - 1}
+\textbf{Antes de la clase.}
+\\
+\vspace{0.5em}
+Para facilitar la discusión en el aula, el alumno revisará el material de trabajo que se le proporcionará oportunamente, así como la solución de algunos ejercicios, de tal manera que llegará a la clase conociendo el tema a desarrollar.
+\end{frame}
+\begin{frame}
+\frametitle{Metodología de Enseñanza - 1}
+\textbf{Antes de la clase.}
+\\
+\vspace{0.5em}
+Daremos por entendido de que el alumno realizará la lectura y actividades establecidas.
+\\
+\bigskip
+\pause
+\begin{alertblock}{Aviso importante}
+Daremos por entendido de que el alumno realizará la lectura y/o actividades.
+\end{alertblock}
+\end{frame}
+\begin{frame} 
+\frametitle{Metodología de Enseñanza - 2}
+\textbf{Durante la clase.}
+\\
+\vspace{0.5em}
+Se dará un tiempo para la exposición con diálogo y discusión del material de trabajo con los temas a cubrir durante el semestre.
+\end{frame}
+\begin{frame}
+\frametitle{Puntos administrativos}
+En lo que corresponde a la parte administrativa:
+\setbeamercolor{item projected}{bg=cadetblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item No se permite el consumo de alimentos y/o bebidas dentro del aula.
+\item Se solicita dejen en modo silencioso el celular.
+\item En caso de alguna eventualidad, se atenderán los protocolos de seguridad.
+\end{enumerate}
+\end{frame}
+
+\section{Temario oficial}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Contenido del temario}
+
+\begin{frame}
+\frametitle{Temario del curso}
+Llevaremos el temario oficial del curso, que está disponible en la página de la Facultad \href{https://www.fciencias.unam.mx/sites/default/files/temario/584.pdf}{- Temario -}, haciendo un ajuste en el orden de los temas, siendo entonces:
+\end{frame}
+
+\subsection*{Tema 1}
+
+\begin{frame}
+\frametitle{\textbf{Tema 1: Ondas electromagnéticas}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Conceptos básicos y propiedades de las ondas.
+\item La ecuación de onda, solución general y principio de superposición.
+\item Teorema de Fourier.
+\item Principio de Huygens, rayos y superficies de onda.
+\item Adición de ondas: a) de la misma frecuencia, b) frecuencia casi idéntica. Conceptos de velocidad de fase y grupo.
+\end{enumerate}
+\end{frame}
+
+\subsection*{Tema 2}
+
+\begin{frame}
+\frametitle{\textbf{Tema 2: Fundamentos de electromagnetismo}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Ecuaciones de Maxwell en a) el vacío y b) medios materiales. Naturaleza electromagnética de
+la luz.
+\item Energía en el campo electromagnético, teorema de Poynting.
+\item Polarización, Ley de Malus y Vectores de Jones
+\end{enumerate}
+\end{frame}
+
+\subsection*{Tema 3}
+
+\begin{frame}
+\frametitle{\textbf{Tema 3: Ecuaciones de Fresnel}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Ecuaciones de Maxwell en términos de las condiciones de frontera.
+\item Reflexión y refracción de ondas electromagnéticas en medios dieléctricos isotrópicos.
+\item Las ecuaciones de Fresnel. Coeficientes de amplitud e intensidad.
+\item Ángulo de Brewster, cambios de fase, reflexión total interna frustrada.
+\end{enumerate}
+\end{frame}
+
+\subsection*{Tema 4}
+
+\begin{frame}
+\frametitle{\textbf{Tema 4: Teoría de la dispersión}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Propagación de la luz en medios dieléctricos isotrópicos.
+\item Dispersión normal y anómala. Absorción.
+\item Propagación de ondas electromagnéticas en medios a) dieléctricos y b) conductores. Frecuencia de plasma.
+\end{enumerate}
+\end{frame}
+
+\subsection*{Tema 5}
+
+\begin{frame}
+\frametitle{\textbf{Tema 5: Fundamentos de la óptica geométrica}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Límites de aplicabilidad de la óptica geométrica.
+\item Camino óptico. Principio de Fermat.
+\item Leyes de la óptica geométrica: reflexión y refracción en superficies planas y curvas.
+\item Reflexión y refracción en superficies esféricas.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{\textbf{Tema 5: Fundamentos de la óptica geométrica}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Lentes delgadas y espejos, aproximación paraxial, ecuación de Gauss y fórmula del fabricante de lentes.
+\item Formación de imágenes y Amplificación a) transversal y b) longitudinal.
+\item Sistemas ópticos: Ojo humano, microscopio, telescopio, cámara fotográfica, número F.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{\textbf{Tema 5: Fundamentos de la óptica geométrica}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Prismas, diferentes tipos y aplicaciones.
+\item Aberraciones.
+\end{enumerate}
+\end{frame}
+
+\subsection*{Tema 6}
+
+\begin{frame}
+\frametitle{\textbf{Tema 6: Interferencia}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Definiciones y conceptos preliminares.
+\item Condiciones para observar interferencia. Leyes de Fresnel-Arago.
+\item Interferencia por división de frente de onda.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{\textbf{Tema 6: Interferencia}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti
+\item Interferencia por división de amplitud.
+\item Tipo y localización de franjas.
+\item Interferómetros y sus aplicaciones.
+\item Películas delgadas. Aplicaciones.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{\textbf{Tema 7: Difracción}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Introducción. Principio de Huygens-Fresnel.
+\item Obstáculos. Principio de Babinet.
+\item Difracción de Fraunhoffer.
+\item Difracción de Fresnel. Espiral de Cornu.
+\item Rejillas de difracción. Aplicaciones.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{\textbf{Tema 8: Óptica de cristales}}
+\setbeamercolor{item projected}{bg=ceruleanblue,fg=amber}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Propagación de la luz en medios cristalinos.
+\item Superficie número de ondas y superficie índice de refracción (descripción).
+\item Birrefringencia, dicroísmo, retardadores, compensadores y polarizadores.
+\item Actividad óptica.
+\item Efectos ópticos inducidos. (Faraday, Kerr, Pockels, foto-elasticidad).
+\end{enumerate}
+\end{frame}
+
+\section{Evaluación del curso}
+\frame{\tableofcontents[currentsection, hideothersubsections]}
+\subsection{Evaluación}
+
+\begin{frame}
+\frametitle{Evaluación - Ejercicios}
+Los elementos y la proporción de la calificación total del curso, se distribuyen de la siguiente manera:
+\setbeamercolor{item projected}{bg=blue,fg=blond}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item \textbf{Tareas $\mathbf{40\%}$} : Se tendrán cuatro tareas durante el curso, se les proporcionará de manera adelantada y con fecha de entrega definida, no se recibirán entregas extemporáneas.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{De las Tareas}
+Para que la tarea se considere, se deberá de entregar el $100\%$ de los ejercicios resueltos.
+\\
+\bigskip
+\pause
+En caso contrario, sólo se revisarán los ejercicios, pero no se tomará en cuenta como parte de la calificación por tareas.
+\end{frame}
+\begin{frame}
+\frametitle{Evaluación - Examen}
+\setbeamercolor{item projected}{bg=blue,fg=blond}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]    
+\conti
+\item \textbf{Exámenes $\mathbf{60\%}$} : Habrá tres exámenes en clase. 
+\item Se indicará oportunamente el día del examen y los temas correspondientes, que se resolverán y entregarán durante la clase.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Trabajo en equipo}
+Podrán reunirse y colaborar para discutir, debatir, proponer y bosquejar la solución a los ejercicios de las tareas.
+\\
+\bigskip
+En el dado caso de encontrar códigos idénticos, se cancelarán no sólo los ejercicios tipo copy-paste, sino la tarea completa del(los) alumnos involucrados.
+\end{frame}
+
+\begin{frame}
+\frametitle{Calificación para aprobar el curso}
+A partir de los elementos para la evaluación, se sumarán las calificaciones obtenidas, en caso de contar con un promedio final aprobatorio  es decir, una calificación mayor o igual a $6$ (seis), \pause esa calificación será la que se asiente en el acta del curso.
+\end{frame}
+\begin{frame}
+\frametitle{Examen final}
+Para presentar el examen final se deben de cumplir cada uno de los siguientes puntos:
+\setbeamercolor{item projected}{bg=darkgreen,fg=darktangerine}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Que en un examen (o más), la calificación sea menor a seis. %Si los examen-tarea tienen calificación aprobatoria, no se permite presentar el examen final para \enquote{subir} la calificación del curso.
+\item Haber entregado los tres exámenes parciales.
+% \item Haber entregado el proyecto final.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Aplicación del examen final}
+De acuerdo al Reglamento de Estudios Profesionales, habrá dos oportunidades para presentar el examen final, cuyas fechas se indican en el calendario del semestre 2024-2.
+\end{frame}
+\begin{frame}
+\frametitle{Puntalizando sobre el examen final}
+\setbeamercolor{item projected}{bg=falured,fg=laserlemon}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Si en la primera ronda de examen final, la calificación obtenida es aprobatoria (mayor o igual a seis), ésta es la que se asentará en el acta del curso, ya no se promedia con los otros elementos de evaluación.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Puntalizando sobre el examen final}
+\setbeamercolor{item projected}{bg=falured,fg=laserlemon}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti    
+\item Si la calificación del examen final en la primera ronda es no aprobatoria, se aplicará nuevamente un examen final en la segunda ronda. 
+\\
+\bigskip
+\pause
+La calificación obtenida en esta segunda ronda, es la que se asentará en el acta del curso.
+\seti
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{Puntalizando sobre el examen final}
+\setbeamercolor{item projected}{bg=falured,fg=laserlemon}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\conti    
+\item Si el alumno no se presenta a la primera ronda del examen final, tendrá cinco como calificación final. Ya no podrá presentar la segunda ronda del examen final.
+\end{enumerate}
+\end{frame}
+\begin{frame}
+\frametitle{\textbf{¿En qué caso tendría NP o 5?}}
+\emph{En el caso de haber presentado al menos un examen parcial y/o haber entregado al menos un ejercicio}, \pause pero si ya no se tiene un posterior registro de entregas, se considera que abandonaron el curso, al no cumplir con los puntos de la lista para el examen final, no se podrá presentar el examen final del curso.
+\\
+\bigskip
+\pause
+La calificación que se asentará en el acta final del curso será \textcolor{lava}{cinco (5)}.
+\end{frame}
+\begin{frame}
+\frametitle{\textbf{¿En qué caso tendría NP o 5?}}
+Se asentará en el acta de calificaciones \textcolor{blue}{No Presentó (NP)}, si y solo si: el alumno no entrega ejercicio alguno y no entrega algún examen-tarea (¿?).
+\\
+\bigskip
+\pause
+Ocupando nuevamente el Reglamento de Estudios Profesionales, tomen en cuenta que:
+\pause
+\begin{itemize}[<+->]
+\item[\ding{212}] No \enquote{se guardan calificaciones}.
+\item[\ding{212}] No se renuncia a una calificación.
+\end{itemize}
+\end{frame}
+
+\subsection{Fechas importantes}
+
+\begin{frame}
+\frametitle{Fechas importantes}
+\setbeamercolor{item projected}{bg=mediumblue,fg=magicmint}
+\setbeamertemplate{enumerate items}{%
+\usebeamercolor[bg]{item projected}%
+\raisebox{1.5pt}{\colorbox{bg}{\color{fg}\footnotesize\insertenumlabel}}%
+}
+\begin{enumerate}[<+->]
+\item Lunes 29 de enero. Inicio del semestre 2024-2.
+\item \textcolor{red}{Miércoles 1 de noviembre. Día feriado.}
+\item \textcolor{red}{Lunes 20 de noviembre. Día feriado.}
+\item Viernes 24 de noviembre. Fin de semestre 2024-1.
+\item Del lunes 27 de noviembre al viernes 1 de diciembre, primera semana de finales.
+\item Del lunes 4 al viernes 8 de diciembre, segunda semana de finales.
+\end{enumerate}
+\end{frame}
+
+\end{document}
