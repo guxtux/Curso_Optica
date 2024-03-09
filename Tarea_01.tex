@@ -1,0 +1,50 @@
+%% LyX 2.3.7 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{units}
+\usepackage{stackrel}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newenvironment{lyxlist}[1]
+	{\begin{list}{}
+		{\settowidth{\labelwidth}{#1}
+		 \setlength{\leftmargin}{\labelwidth}
+		 \addtolength{\leftmargin}{\labelsep}
+		 \renewcommand{\makelabel}[1]{##1\hfil}}}
+	{\end{list}}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\title{Tarea 1 óptica}
+\maketitle
+\begin{center}
+{\large{}02/24/24}{\large\par}
+\par\end{center}
+\begin{lyxlist}{00.00.0000}
+\item [{\textbf{Problema}}] \textbf{1}: Demostrar que el momento canónico
+del campo electromagnético en el vacío es: $\vec{p}=\epsilon_{0}\mu_{0}\vec{S}$
+\item [{\textbf{Problema}}] \textbf{2}: Escriba las ecuaciones de Maxwell
+en su forma covariante.
+\item [{\textbf{Problema}}] \textbf{3}:Bajo las consideraciones $0\leq x\leq a$,
+$H_{0},\,a,\,k,\,y\,\omega$ son constantes y se satisface la relación
+de dispersión $\mu_{0}\epsilon_{0}\omega^{2}=k^{2}+\left(\nicefrac{\pi}{a}\right)^{2}$.
+a) Muestre que las siguientes expresiones satisfacen las ecuaciones
+de maxwell en el vacío: $E_{y}=-H_{0}\mu_{0}\omega\left(\frac{a}{\pi}\right)sen\left(kz-\omega t\right)sen\left(\frac{\pi x}{a}\right)$,
+$H_{x}=H_{0}k\left(\frac{a}{\pi}\right)sen\left(kz-\omega t\right)sen\left(\frac{\pi x}{a}\right)$,
+$H_{z}=H_{0}cos\left(kz-\omega t\right)cos\left(\frac{\pi x}{a}\right)$,
+el resto de las componentes son cero y puede asumir que no hay presencia
+de cargas o corrientes libres. b) Encontrar la corriente de desplazamiento.
+c) Encontrar el vector de Poynting.
+\item [{\textbf{Problema}}] \textbf{4}:Una onda estacionaria viene dada
+por $E=100sen\left(\frac{2}{3}\pi x\right)cos\left(5\pi t\right)$,
+determine dos ondas que pueden superponese para crearla.
+\item [{\textbf{Problema}}] \textbf{5}:Demuestre que en la representación
+de Fourier la función $f(x)=|sen(x)|$ es: $f(x)=\frac{2}{\pi}-\frac{4}{\pi}\stackrel[m=1]{\infty}{\sum}\frac{cos(2mx)}{4m^{2}-1}$
+\end{lyxlist}
+
+\end{document}
