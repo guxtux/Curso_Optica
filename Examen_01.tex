@@ -1,0 +1,76 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{calc}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\sisetup{per-mode=symbol}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+
+\author{\normalsize{M. en C. Gustavo Contreras Mayén.} \quad \normalsize{\texttt{gux7avo@ciencias.unam.mx}} \\
+\normalsize{M. en C. Abraham Lima Buendía.} \quad \normalsize{\texttt{abraham3081@ciencias.unam.mx}}}
+\title{\vspace*{-2cm} Examen Parcial 1 - Curso de Óptica}
+\date{ }
+
+\begin{document}
+
+\maketitle
+\begin{enumerate}
+\item Confirma que la matriz :
+\begin{align*}
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\
+0 & 0 & 0 & -1 \\
+0 & 0 & 1 & 0 \\
+0 & 1 & 0 & 0        
+\end{bmatrix}
+\end{align*}
+actuará como matriz de Muller, para una lámina de un cuarto de onda cuyo eje rápido se halla a +\ang{45} Ilumina con un haz de luz polarizada lineal a \ang{45} ¿Qué pasa? ¿Qué emerge al entrar en el dispositivo un estado $P$ horizontal? 
+\item Escribe una expresión para una onda luminosa de estado $P$ con frecuencia angular $\omega$ y amplitud $E_{0}$ propagándose a lo largo de una línea en el plano $x-y$ a \ang{45} respecto al eje $x$, cuyo plano de vibración está en el plano $x-y$. En $t = 0$ y $ x = 0$ el campo es cero.
+\item Demuestra que la resultante de dos ondas:
+\begin{align*}
+E_{1} &= E_{01} \sin \left[ \omega t - k \left( x + \Delta x \right) \right] \\[0.5em]
+E_{2} &= E_{01} \sin \left[ \omega t - k \, x \right]
+\end{align*}
+es la siguiente:
+\begin{align*}
+E = 2\, E_{01} \, \cos \left[ \dfrac{k \, \Delta \, x}{2} \right] \, \sin \left[ \omega t - k \left( x + \Delta \, x \right) \right]
+\end{align*}
+\item El campo eléctrico de una onda electromagnética que viaja en la dirección positiva de $x$ está dada por:
+\begin{align*}
+\va{E} = \vu{j} \, \mathrm{ \sin \left[ \mathit{\dfrac{\pi \, z}{z_{0}}} \right] \, \cos \left[ \mathit{ k x - \omega t} \right]}
+\end{align*}
+determina una expresión para $k$ y calcula la velocidad de fase de la onda. 
+\end{enumerate}
+
+\end{document}
