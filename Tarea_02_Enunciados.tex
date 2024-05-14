@@ -1,0 +1,73 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{calc}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\sisetup{per-mode=symbol}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+
+\author{\normalsize{M. en C. Gustavo Contreras Mayén.} \quad \normalsize{\texttt{gux7avo@ciencias.unam.mx}} \\
+\normalsize{M. en C. Abraham Lima Buendía.} \quad \normalsize{\texttt{abraham3081@ciencias.unam.mx}}}
+\title{\vspace*{-2cm} Tarea 2 (Primera parte) - Curso de Óptica}
+\date{ }
+
+\begin{document}
+
+\setstretch{1.3}
+
+\maketitle
+\fontsize{14}{14}\selectfont
+
+\begin{itemize}
+\item \textbf{Problema 1: }Usando el pricipio de Fermat deduzca la ley de Snell para una superficie plana, su demostración debe mostrar que el rayo incidente, el reflejado y el transmitido están definidos en el mismo plano.
+\item \textbf{Problema 2}:Imagine que tiene una placa de vidrio no absorbente de índice de refracción $n$ y grosor $\Delta y$, que se encuentra entre un foco $S$ y un observador $P$.
+
+a) Si la onda no está obstruida (sin que la placa esté presente), demuestra que:
+\begin{align*}
+E_{u} = E_{0} \, \exp \left[i \omega \left(t - \dfrac{y}{c} \right) \right]
+\end{align*}
+
+b) Demuestre que con la placa en su lugar el observador ve una onda:
+\begin{align*}
+E_{p} = E_{0} \, \exp \left[ \displaystyle i \omega \left( t - \left\{ n-1\right\} \dfrac{\Delta y}{c}\dfrac{y}{c}\right) \right]
+\end{align*}
+que se puede aproximar como:
+\begin{align*}
+E_{p} = E_{u} + \dfrac{\omega (n - 1) \Delta y}{c} \, E_{u} \exp\left[-i \dfrac{\pi}{2} \right]
+\end{align*}
+\item \textbf{Problema 3}: La luz incide sobre una interfaz aire vidrio. Si el índice de refracción del vidrio es $1.70$ averigüe el ángulo incidente $\theta_{i}$ tal que el ángulo de transmisión sea igual a $\dfrac{\theta_{i}}{2}$
+\item \textbf{Problema 4}: Suponga que se enfoca una cámara sobre una letra impresa en una hoja. Cubra la imagen con un porta objetos de \SI{1}{\milli\meter} de grosor e índice de refracción $n = 1.55$ ¿Cuánto deberá alejarse la cámara en el aire para que la letra siga enfocada?
+\end{itemize}
+
+\end{document}

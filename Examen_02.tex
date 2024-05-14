@@ -1,0 +1,68 @@
+\documentclass[14pt]{extarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-lcroman]{babel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{calc}
+\usepackage[autostyle,spanish=mexican]{csquotes}
+\usepackage[per-mode=symbol]{siunitx}
+\usepackage{gensymb}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{setspace}
+\usepackage[left=2.00cm, right=2.00cm, top=2.00cm, 
+     bottom=2.00cm]{geometry}
+\usepackage{Estilos/ColoresLatex}
+\usepackage{makecell}
+
+\newcommand{\textocolor}[2]{\textbf{\textcolor{#1}{#2}}}
+\sisetup{per-mode=symbol}
+\decimalpoint
+\sisetup{bracket-numbers = false}
+\newlength{\depthofsumsign}
+\setlength{\depthofsumsign}{\depthof{$\sum$}}
+\newcommand{\nsum}[1][1.4]{% only for \displaystyle
+    \mathop{%
+        \raisebox
+            {-#1\depthofsumsign+1\depthofsumsign}
+            {\scalebox
+                {#1}
+                {$\displaystyle\sum$}%
+            }
+    }
+}
+
+
+\author{\normalsize{M. en C. Gustavo Contreras Mayén.} \quad \normalsize{\texttt{gux7avo@ciencias.unam.mx}} \\
+\normalsize{M. en C. Abraham Lima Buendía.} \quad \normalsize{\texttt{abraham3081@ciencias.unam.mx}}}
+\title{\vspace*{-2cm} Examen Parcial 2 - Curso de Óptica}
+\date{ }
+
+\begin{document}
+
+\maketitle
+\fontsize{14}{14}\selectfont
+
+\setstretch{1.3}
+
+\begin{itemize}
+\item \textbf{Problema 1:} La imagen proyectada por una lente equiconvexa $n = 1.50$ de una rana con una  altura de \SI{5}{\centi\meter} y que se halla a \SI{0.6}{\centi\meter} de una pantalla tienen que medir \SI{25}{\centi\meter} de alto. Calcula el radio de la lente.
+\item \textbf{Problema 2:} Demuestra que la separación mínima entre los puntos conjugados objeto e imagen en una lente delgada es $4 \, f$.
+\item \textbf{Problema 3:} Considera una lente positiva delgada $L1$, demuestra que si una segunda lente se coloca a la distancia focal de $L1$ el aumento de la imagen no cambia. Recurre a las fórmulas vistas en clase y explica su resultado con un diagrama de rayos.
+\item \textbf{Problema 4:} Diseña el ojo de un robot con un espejo esférico cóncavo de tal manera que la imagen de un objeto de altura \SI{1}{\meter} y colocado a una distancia de \SI{10}{\meter} llene su fotodetector cuadrado de \SI{1}{\centi\meter}. ¿Dónde debería estar ubicado dicho detector con respecto al espejo? ¿Cuál debería ser la distancia focal del espejo? Traza un diagrama de rayos.
+\item \textbf{Problema 5:} Determina la apertura numérica de una única fibra óptica con recubrimiento sabiendo que el índice del núcleo y el revestimiento es de \num{1.62} y \num{1.52} respectivamente. ¿Cuál es el máximo ángulo de aceptación cuando se sumerge en el aire? ¿Qué le pasaría a un rayo incidente a \ang{45}?
+
+\newpage
+
+\item \textbf{Problema 6:} Considerando la operación de un espejo esférico, demuestra que las posiciones del objeto y la imagen son proporcionadas por:
+\begin{align*}
+s_{0} &= \dfrac{f \, \left( M_{T} - 1 \right)}{M_{T}} \\[0.5em]
+s_{I} &= - f \left(M_{T} - 1 \right)
+\end{align*}
+\end{itemize}
+
+\end{document}
