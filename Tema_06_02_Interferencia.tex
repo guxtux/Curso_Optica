@@ -46,11 +46,14 @@
     }
 }
 
-\title{\vspace*{-2cm} Interferencia}
+\title{\vspace*{-2cm} Interferencia \\ Curso de Óptica \vspace{-3ex}}
 \date{ }
+
+\linespread{1.15}
 
 \begin{document}
 \maketitle
+\vspace*{-2cm}
 
 % Ref. Pedrotti - Introduction to optics. Chapter 7 - Interference of light.
 \section{Introducción.}
@@ -64,7 +67,7 @@ Consideramos primero la interferencia de dos ondas planas de la misma frecuencia
 \va{E}_{1} &= \va{E}_{01} \cos (k \,s_{1} - \omega \, t + \phi_{1}) \label{eq:ecuacion_07_01} \\
 \va{E}_{2} &= \va{E}_{02} \cos (k \,s_{2} - \omega \, t + \phi_{2}) \label{eq:ecuacion_07_02}
 \end{eqnarray}
-En estas relaciones $k = 2 \pi / \lambda$ y $s_{1}$ y $s_{2}$ pueden tomarse como las distancias recorridas por cada haz a lo largo de su trayectoria respectiva desde su fuente hasta el punto de observación $P$. (ver figura \ref{fig:figura_07_01}.)
+En estas relaciones $k = 2 \pi / \lambda$, además $s_{1}$ y $s_{2}$ pueden tomarse como las distancias recorridas por cada haz a lo largo de su trayectoria respectiva desde su fuente hasta el punto de observación $P$. (ver figura \ref{fig:figura_07_01}.)
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.7]{Imagenes/Interferencia2_01.png}
@@ -99,7 +102,7 @@ I = I_{1} + I_{2} + I_{12}
 \label{eq:ecuacion_07_05}
 \end{align}
 
-Si la luz se comportara sin interferencias, como las partículas clásicas, entonces esperaríamos que $I = I_{1} + I_{2}$. La presencia del tercer término $I_{12}$ es indicativo de la naturaleza ondulatoria de la luz, que puede producir un aumento o una disminución de la irradiancia a través de la interferencia. Observe que cuando $\va{E}_{1}$ y $\va{E}_{2}$ son ortogonales, de modo que su producto escalar desaparece, no se produce interferencia. Por el contrario, cuando los campos eléctricos son paralelos, el término de interferencia hace su máxima contribución. Dos haces de luz no polarizada producen interferencia porque cada uno se puede resolver en componentes ortogonales de $\va{E}$ que luego se pueden emparejar con componentes similares del otro haz. Cada componente produce un término de interferencia con $\va{E}_{1} \parallel \va{E}_{2}$ ($\va{E}_{1}$ paralelo a $\va{E}_{2}$).
+Si la luz se comportara sin interferencias, como las partículas clásicas, entonces esperaríamos que $I = I_{1} + I_{2}$. La presencia del tercer término $I_{12}$ es indicativo de la naturaleza ondulatoria de la luz, que puede producir un aumento o una disminución de la irradiancia a través de la interferencia. Obsérvese que cuando $\va{E}_{1}$ y $\va{E}_{2}$ son ortogonales, de modo que su producto escalar se anula, no se produce interferencia. Por el contrario, cuando los campos eléctricos son paralelos, el término de interferencia hace su máxima contribución. Dos haces de luz no polarizada producen interferencia porque cada uno se puede resolver en componentes ortogonales de $\va{E}$ que luego se pueden emparejar con componentes similares del otro haz. Cada componente produce un término de interferencia con $\va{E}_{1} \parallel \va{E}_{2}$ ($\va{E}_{1}$ paralelo a $\va{E}_{2}$).
 \par
 Consideremos el término de interferencia:
 \begin{align}
@@ -271,7 +274,7 @@ I_{1} &= \dfrac{1}{2} \epsilon_{0} \, c \, E_{01}^{2} = \dfrac{1}{2} \epsilon_{0
 I_{2} &= \dfrac{1}{2} \epsilon_{0} \, c \, E_{02}^{2} = \dfrac{1}{2} \epsilon_{0} \, c \left( 5000 \right)^{2} = \SI{33180}{\watt\per\square\meter} \\[0.5em]
 I_{12} &= 2 \, \sqrt{I_{1} \, I_{2}} \, \cos \delta = 2 \, \sqrt{(5309 \cdot 33180)} \, \cos (\pi/12) = \SI{25640}{\watt\per\square\meter}
 \end{align*}
-Para obtener la visibilidad cercana a este punt de recombinación, debemos de calcular:
+Para obtener la visibilidad cercana a este punto de recombinación, debemos de calcular:
 \begin{align*}
 I_{\max} &= I_{1} + I_{2} + 2 \, \sqrt{I_{1} \, I_{2}} = 5309 + 33180 + 2 \sqrt{(5309 \cdot 33180)} =  \SI{65034}{\watt\per\square\meter} \\[0.5em]
 I_{\min} &= I_{1} + I_{2} - 2 \, \sqrt{I_{1} \, I_{2}} = 5309 + 33180 - 2 \sqrt{(5309 \cdot 33180)} =  \SI{11945}{\watt\per\square\meter}
@@ -470,7 +473,41 @@ y
 AD = AC \, \sin \theta_{i}
 \label{eq:ecuacion_07_32}
 \end{align}
+De la ec. (\ref{eq:ecuacion_07_31}) e incorporando las ecs. (\ref{eq:ecuacion_07_32}) y (\ref{eq:ecuacion_07_30}):
+\begin{align*}
+2 \, AE =  AC \, \sin \theta_{t} = AD \left( \dfrac{\sin \theta_{t}}{\sin \theta_{i}} \right) = AD \, \left( \dfrac{n_{0}}{n_{f}} \right)
+\end{align*}
+por lo que:
+\begin{align}
+n_{0} \, AD = 2 \, n_{f} \, AE = n_{f} (AE + FC)
+\label{eq:ecuacion_07_33}
+\end{align}
+lo cual estaba por demostrar. Queda entonces de la ec. (\ref{eq:ecuacion_07_29}):
+\begin{align}
+\Delta = n_{f} (EB + BF) = 2 \, n_{f} \, EB
+\label{eq:ecuacion_07_34}
+\end{align}
+La longitud $EB$ está relacionada con el espesor de la película $t$ por $EB = t \, \cos \theta_{t}$, por lo que finalmente tenemos:
+\begin{align}
+\Delta = 2 \, n_{f} \, t \, \cos \theta_{t}
+\label{eq:ecuacion_07_35}
+\end{align}
 
+La diferencia de camino óptico $\Delta$ se expresa económicamente mediante la ec. (\ref{eq:ecuacion_07_35}) en términos del ángulo de refracción, no del ángulo de incidencia, que por supuesto puede recuperarse mediante la ley de Snell, ec. (\ref{eq:ecuacion_07_30}). Toma en cuenta que para una incidencia normal $\theta_{i} = \theta_{t} = 0$ y $\Delta = 2 \, n_{f} \, t$, como se esperaba. La diferencia de fase correspondiente es:
+\begin{align*}
+\delta = k \, \Delta = \left( \dfrac{2 \pi}{\lambda_{0}} \right) \, \Delta
+\end{align*}
+La diferencia de fase neta también debe tener en cuenta las posibles diferencias de fase que surgen en la reflexión, como se analizó anteriormente. Sin embargo, si llamamos $\Delta_{p}$ a la diferencia de camino óptico dada por la ec. (\ref{eq:ecuacion_07_35}) y $\Delta_{r}$ a la diferencia de trayectoria equivalente que surge del cambio de fase en la reflexión, podemos enunciar de manera bastante general las condiciones para:
+\begin{align}
+\text{interferencia constructiva}: \hspace{0.2cm} \Delta_{p} + \Delta_{r} = m \, \lambda
+\label{eq:ecuacion_07_36}
+\end{align}
+y
+\begin{align}
+\text{interferencia destructiva}: \hspace{0.2cm} \Delta_{p} + \Delta_{r} = \left( m + \dfrac{1}{2} \right) \lambda
+\label{eq:ecuacion_07_37}
+\end{align}
+donde $m = 0, 1, 2, \ldots$
 
 
 \end{document}
